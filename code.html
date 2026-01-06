@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timetable Scheduler Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="code.css">
+</head>
+<body>
+
+<!-- Floating background particles -->
+<div id="particles" class="floating-particles"></div>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Timetable Scheduler Pro</h1>
+        <p>✨ Create, drag & organize your perfect schedule ✨</p>
+    </div>
+
+    <!-- Select Day & Time -->
+    <div class="schedule-header">
+
+        <div class="control-group">
+            <label>📅 Select Day</label>
+            <select id="daySelect" class="select-input day-select">
+                <option value="mon">Monday</option>
+                <option value="tue">Tuesday</option>
+                <option value="wed">Wednesday</option>
+                <option value="thu">Thursday</option>
+                <option value="fri">Friday</option>
+                <option value="sat">Saturday</option>
+                <option value="sun">Sunday</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>⏰ Select Time Slot</label>
+            <select id="timeSelect" class="select-input time-select">
+                <option value="time_0">08:00 - 09:00</option>
+                <option value="time_1">09:00 - 10:00</option>
+                <option value="time_2">10:00 - 11:00</option>
+                <option value="time_3">11:00 - 12:00</option>
+                <option value="time_4">12:00 - 13:00</option>
+                <option value="time_5">13:00 - 14:00</option>
+                <option value="time_6">14:00 - 15:00</option>
+                <option value="time_7">15:00 - 16:00</option>
+                <option value="time_8">16:00 - 17:00</option>
+                <option value="time_9">17:00 - 18:00</option>
+                <option value="time_10">18:00 - 19:00</option>
+                <option value="time_11">19:00 - 20:00</option>
+            </select>
+        </div>
+
+    </div>
+
+    <!-- Subject Input -->
+    <div class="top-controls">
+        <input
+            type="text"
+            id="subjectInput"
+            class="subject-input"
+            placeholder="🎯 Enter subject / activity (Maths, Break, Meeting...)">
+
+        <button class="btn" onclick="addSchedule()">🚀 Add Schedule</button>
+    </div>
+
+    <!-- Timetable Grid -->
+    <div class="schedule-grid">
+        <div id="scheduleGrid" class="grid-wrapper">
+            <!-- JS dynamically builds grid here -->
+        </div>
+    </div>
+
+    <!-- Bottom Buttons -->
+    <div class="bottom-controls">
+        <button class="btn btn-secondary" onclick="clearAll()">🗑️ Reset All</button>
+        <button class="btn" onclick="printSchedule()">🖨️ Print Schedule</button>
+    </div>
+
+</div>
+
+<!-- JavaScript -->
+<script src="code.js"></script>
+</body>
+</html>
